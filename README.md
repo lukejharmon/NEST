@@ -25,7 +25,8 @@ Elizabeth Daniel
 
 ### Nelson Mandela Institute of African Technology
 
-## Find potential committee members
+xxx
+
 
 <html lang="en">
 <head>
