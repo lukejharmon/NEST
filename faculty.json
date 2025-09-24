@@ -1,20 +1,191 @@
 [
   {
-    "name": "Dr. Asha M.",
-    "institution": "University of Dar es Salaam",
-    "email": "asha@example.tz",
-    "country": "Tanzania",
-    "keywords": ["bioinformatics", "metagenomics", "microbiome"],
-    "topics": "Computational microbiome ecology in tropical systems",
-    "website": "https://example.tz/asha"
+    "name": "Paul Hohenlohe",
+    "institution": "University of Idaho",
+    "country": "USA",
+    "email": "",
+    "keywords": ["population genomics", "conservation genetics", "evolutionary biology"],
+    "topics": "Genomic and evolutionary processes in wild populations",
+    "website": "https://hohenlohelab.github.io/people.html"
   },
   {
-    "name": "Luke Harmon",
+    "name": "Luke J. Harmon",
     "institution": "University of Idaho",
-    "email": "luke@example.edu",
     "country": "USA",
-    "keywords": ["macroevolution", "phylogenetics", "comparative methods"],
-    "topics": "Comparative phylogenetics and trait evolution",
-    "website": "https://example.edu/luke"
+    "email": "",
+    "keywords": ["macroevolution", "phylogenetics", "trait evolution", "comparative methods"],
+    "topics": "Macroevolutionary patterns, trait evolution across clades",
+    "website": ""
+  },
+  {
+    "name": "Scott Nuismer",
+    "institution": "University of Idaho",
+    "country": "USA",
+    "email": "",
+    "keywords": ["host–parasite dynamics", "epidemiology", "modeling coevolution"],
+    "topics": "Evolutionary epidemiology, modeling host-parasite interactions",
+    "website": ""
+  },
+  {
+    "name": "Christine Parent",
+    "institution": "University of Idaho",
+    "country": "USA",
+    "email": "",
+    "keywords": ["evolutionary biology", "land snails", "speciation", "biogeography"],
+    "topics": "Island systems, speciation and trait evolution in snails",
+    "website": ""
+  },
+  {
+    "name": "John \"Jack\" M. Sullivan",
+    "institution": "University of Idaho",
+    "country": "USA",
+    "email": "",
+    "keywords": ["evolutionary genetics", "molecular evolution", "population genetics"],
+    "topics": "Molecular evolution and population genetics in natural systems",
+    "website": ""
+  },
+  {
+    "name": "Christopher Marx",
+    "institution": "University of Idaho",
+    "country": "USA",
+    "email": "",
+    "keywords": ["experimental evolution", "microbial evolution", "adaptive dynamics"],
+    "topics": "Experimental evolution in microbes, adaptation dynamics",
+    "website": ""
+  },
+  {
+    "name": "Craig Miller",
+    "institution": "University of Idaho",
+    "country": "USA",
+    "email": "crmiller@uidaho.edu",
+    "keywords": ["viral phylodynamics", "modeling adaptation", "epistasis", "viral genomics"],
+    "topics": "Models of viral adaptation, epistasis, molecular to phenotypic prediction",
+    "website": ""
+  },
+  {
+    "name": "Barrie Robison",
+    "institution": "University of Idaho",
+    "country": "USA",
+    "email": "",
+    "keywords": ["data science", "interdisciplinary research", "computational methods"],
+    "topics": "Cross-disciplinary computational methods and data science infrastructure",
+    "website": ""
+  },
+  {
+    "name": "Holly A. Wichman",
+    "institution": "University of Idaho",
+    "country": "USA",
+    "email": "hwichman@uidaho.edu",
+    "keywords": ["evolutionary biology", "viral evolution", "adaptation", "modeling"],
+    "topics": "Viral evolution, adaptive dynamics, integrating modeling & experiments",
+    "website": ""
+  },
+  {
+    "name": "Klas Udekwu",
+    "institution": "University of Idaho",
+    "country": "USA",
+    "email": "",
+    "keywords": ["microbial genomics", "antibiotic resistance", "bioinformatics"],
+    "topics": "Genomics of microbes, antibiotic resistance, computational microbiology",
+    "website": ""
+  },
+  {
+    "name": "Min Xian",
+    "institution": "University of Idaho",
+    "country": "USA",
+    "email": "",
+    "keywords": ["statistical methods", "computational biology", "algorithm development"],
+    "topics": "Algorithm development for computational biology and statistics",
+    "website": ""
+  },
+  {
+    "name": "Tiantian Yang",
+    "institution": "University of Idaho",
+    "country": "USA",
+    "email": "",
+    "keywords": ["computational biology", "genomics", "data science"],
+    "topics": "Genomic data analysis, computational biology methods",
+    "website": ""
+  },
+  {
+    "name": "Fan Yi",
+    "institution": "University of Idaho",
+    "country": "USA",
+    "email": "",
+    "keywords": ["mathematical biology", "population dynamics", "disease modeling"],
+    "topics": "Models of population dynamics, disease and evolutionary biology",
+    "website": ""
+  },
+  {
+    "name": "F. Marty Ytreberg",
+    "institution": "University of Idaho",
+    "country": "USA",
+    "email": "",
+    "keywords": ["computational biophysics", "molecular modeling", "protein folding"],
+    "topics": "Molecular dynamics, protein folding/structure prediction, biophysics",
+    "website": ""
+  },
+  {
+    "name": "Erkan Buzbas",
+    "institution": "University of Idaho",
+    "country": "USA",
+    "email": "erkanb@uidaho.edu",
+    "keywords": ["metascience", "reproducibility", "Bayesian statistics", "statistical computation"],
+    "topics": "Meta-science and computational statistical methods for reproducibility",
+    "website": "https://www.uidaho.edu/people/erkanb"
+  },
+  {
+    "name": "JT VanLeuven",
+    "institution": "University of Idaho",
+    "country": "USA",
+    "email": "jtvanleuven@uidaho.edu",
+    "keywords": ["phage ecology", "viral evolution", "microbiome interactions", "modeling"],
+    "topics": "Interactions among viruses, bacteria, hosts; phage ecology & evolution",
+    "website": ""
+  },
+  {
+    "name": "Ben Ridenhour",
+    "institution": "University of Idaho",
+    "country": "USA",
+    "email": "",
+    "keywords": ["epidemics", "statistical epidemiology", "population genetics"],
+    "topics": "Statistical modeling of epidemics, evolutionary aspects of disease spread",
+    "website": ""
+  },
+  {
+    "name": "Chris Remien",
+    "institution": "University of Idaho",
+    "country": "USA",
+    "email": "",
+    "keywords": ["modeling evolution", "disease ecology", "coalescent theory"],
+    "topics": "Modeling evolutionary processes, disease ecology, population genetics",
+    "website": ""
+  },
+  {
+    "name": "Terry Soule",
+    "institution": "University of Idaho",
+    "country": "USA",
+    "email": "",
+    "keywords": ["computer science", "algorithms", "computational systems"],
+    "topics": "Algorithms, computational systems relevant to bioinformatics",
+    "website": ""
+  },
+  {
+    "name": "Eva Top (Emerita)",
+    "institution": "University of Idaho",
+    "country": "USA",
+    "email": "",
+    "keywords": ["developmental biology", "molecular biology", "genetics"],
+    "topics": "Developmental and molecular biology, genetics (emerita)",
+    "website": ""
+  },
+  {
+    "name": "Larry Forney (Emeritus)",
+    "institution": "University of Idaho",
+    "country": "USA",
+    "email": "",
+    "keywords": ["microbial ecology", "microbiome", "bioinformatics"],
+    "topics": "Microbial ecology, microbiomes, tools in bioinformatics (emeritus)",
+    "website": ""
   }
 ]

@@ -27,7 +27,6 @@ Elizabeth Daniel
 
 ## Find potential committee members
 
-<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
