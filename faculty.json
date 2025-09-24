@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Dr. Asha M.",
+    "institution": "University of Dar es Salaam",
+    "email": "asha@example.tz",
+    "country": "Tanzania",
+    "keywords": ["bioinformatics", "metagenomics", "microbiome"],
+    "topics": "Computational microbiome ecology in tropical systems",
+    "website": "https://example.tz/asha"
+  },
+  {
+    "name": "Luke Harmon",
+    "institution": "University of Idaho",
+    "email": "luke@example.edu",
+    "country": "USA",
+    "keywords": ["macroevolution", "phylogenetics", "comparative methods"],
+    "topics": "Comparative phylogenetics and trait evolution",
+    "website": "https://example.edu/luke"
+  }
+]
