@@ -1,5 +1,10 @@
-![image](images/nest_logo2.png)
+
 # NEST - Network for East Africa Science and Training
+<img style="float: right;" src="images/nest_logo2.png" alt="NEST" width="200"/>
+
+About NEST
+Find committee members
+Collaboration network
 
 NEST is a group of faculty interested in fostering scientific collaborations in bioinformatics with institutions in East Africa.
 
