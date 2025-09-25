@@ -4,14 +4,6 @@
 
 [About NEST](about.html)  
 [Find committee members and collaborators](faculty_finder.html)  
-Collaboration network  
+[Collaboration network](projects.html)  
 
 <br clear="left"/>
-
-
-
-
-
-## Collaboration Network
-
-(webapp here)
