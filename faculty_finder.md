@@ -101,7 +101,7 @@
     let fuse;
 
     async function loadData() {
-      const res = await fetch('faculty.json', { cache: 'no-cache' });
+      const res = await fetch('/NEST/faculty.json', { cache: 'no-cache' });
       faculty = await res.json();
 
       // Populate country filter (unique, sorted)
