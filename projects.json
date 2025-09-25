@@ -1,0 +1,183 @@
+[
+  {
+    "id": "proj-d1136fa6",
+    "title": "Soil Microbiome & Food Safety (Idaho–Arusha)",
+    "status": "active",
+    "countries": [
+      "Tanzania",
+      "USA"
+    ],
+    "institutions": [
+      "NM-AIST",
+      "University of Idaho"
+    ],
+    "leads": [
+      "Neema Kassim",
+      "Holly A. Wichman"
+    ],
+    "emails": [
+      "neema.kassim@nm-aist.ac.tz",
+      "hwichman@uidaho.edu"
+    ],
+    "keywords": [
+      "microbiome",
+      "food safety",
+      "metagenomics",
+      "risk assessment",
+      "mycotoxins"
+    ],
+    "description": "Joint project on microbial contamination pathways across soil-to-food interfaces, integrating metagenomics and quantitative risk assessment.",
+    "needs": [
+      "Bioinformatics support",
+      "Local sampling logistics",
+      "Mini-grant for sequencing"
+    ],
+    "mentorsWanted": true,
+    "last_updated": "2025-09-25",
+    "links": [
+      "https://example.org/soil-microbiome"
+    ]
+  },
+  {
+    "id": "proj-a0951ae7",
+    "title": "Vector-Borne Disease Modeling & Genomics",
+    "status": "planning",
+    "countries": [
+      "Tanzania",
+      "USA"
+    ],
+    "institutions": [
+      "NM-AIST",
+      "University of Idaho"
+    ],
+    "leads": [
+      "Emmanuel A. Mpolya",
+      "Ben Ridenhour",
+      "Scott Nuismer"
+    ],
+    "emails": [
+      "emmanuel.mpolya@nm-aist.ac.tz",
+      "",
+      ""
+    ],
+    "keywords": [
+      "epidemiology",
+      "population genomics",
+      "evolutionary epidemiology",
+      "modeling",
+      "One Health"
+    ],
+    "description": "Integrate field surveillance data and genomic markers into models of transmission and control for vector-borne diseases.",
+    "needs": [
+      "Graduate student",
+      "Compute credits",
+      "Data sharing MOU"
+    ],
+    "mentorsWanted": true,
+    "last_updated": "2025-09-25",
+    "links": []
+  },
+  {
+    "id": "proj-f020c4c3",
+    "title": "Plant Breeding GxE for Climate Resilience",
+    "status": "idea",
+    "countries": [
+      "Tanzania"
+    ],
+    "institutions": [
+      "NM-AIST"
+    ],
+    "leads": [
+      "Mashamba Philipo"
+    ],
+    "emails": [
+      "mashamba.philipo@nm-aist.ac.tz"
+    ],
+    "keywords": [
+      "GxE",
+      "molecular breeding",
+      "cassava",
+      "maize",
+      "genomics"
+    ],
+    "description": "Design trials to quantify genotype-by-environment effects and feed genomic selection pipelines for staples.",
+    "needs": [
+      "Trial design feedback",
+      "Genotyping partner",
+      "Field data app"
+    ],
+    "mentorsWanted": true,
+    "last_updated": "2025-09-25",
+    "links": []
+  },
+  {
+    "id": "proj-90ea7fd5",
+    "title": "Island Systems Genomics & Biogeography",
+    "status": "active",
+    "countries": [
+      "Tanzania",
+      "USA"
+    ],
+    "institutions": [
+      "NM-AIST",
+      "University of Idaho"
+    ],
+    "leads": [
+      "Christine Parent",
+      "Luke J. Harmon"
+    ],
+    "emails": [
+      "",
+      ""
+    ],
+    "keywords": [
+      "island biogeography",
+      "speciation",
+      "phylogenomics",
+      "macroecology"
+    ],
+    "description": "Comparative genomics of island lineages paired with macroevolutionary modeling to test colonization and diversification hypotheses.",
+    "needs": [
+      "Sequence data curation",
+      "GIS support",
+      "Visualization"
+    ],
+    "mentorsWanted": false,
+    "last_updated": "2025-09-25",
+    "links": []
+  },
+  {
+    "id": "proj-6b0a7e7a",
+    "title": "Wastewater AMR Surveillance Pilot",
+    "status": "planning",
+    "countries": [
+      "Tanzania"
+    ],
+    "institutions": [
+      "NM-AIST"
+    ],
+    "leads": [
+      "Clara Mollay",
+      "Klas Udekwu"
+    ],
+    "emails": [
+      "",
+      ""
+    ],
+    "keywords": [
+      "antimicrobial resistance",
+      "wastewater",
+      "metagenomics",
+      "public health"
+    ],
+    "description": "Pilot surveillance of antimicrobial resistance signatures in municipal wastewater using shotgun metagenomics.",
+    "needs": [
+      "Sampling kits",
+      "Sequencing funds",
+      "Local lab partner"
+    ],
+    "mentorsWanted": true,
+    "last_updated": "2025-09-25",
+    "links": []
+  }
+]

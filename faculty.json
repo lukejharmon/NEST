@@ -4,8 +4,13 @@
     "institution": "University of Idaho",
     "country": "USA",
     "email": "",
-    "keywords": ["population genomics", "conservation genetics", "evolutionary biology"],
-    "topics": "Genomic and evolutionary processes in wild populations",
+    "keywords": [
+      "population genomics",
+      "conservation genetics",
+      "evolutionary biology",
+      "wildlife genomics"
+    ],
+    "topics": "Genomic and evolutionary processes in wild populations; applications to conservation genetics.",
     "website": "https://hohenlohelab.github.io/people.html"
   },
   {
@@ -13,8 +18,14 @@
     "institution": "University of Idaho",
     "country": "USA",
     "email": "",
-    "keywords": ["macroevolution", "phylogenetics", "trait evolution", "comparative methods"],
-    "topics": "Macroevolutionary patterns, trait evolution across clades",
+    "keywords": [
+      "macroevolution",
+      "phylogenetics",
+      "comparative methods",
+      "trait evolution",
+      "island biogeography"
+    ],
+    "topics": "Macroevolutionary patterns and processes; comparative methods and trait evolution across the tree of life.",
     "website": ""
   },
   {
@@ -22,8 +33,13 @@
     "institution": "University of Idaho",
     "country": "USA",
     "email": "",
-    "keywords": ["host–parasite dynamics", "epidemiology", "modeling coevolution"],
-    "topics": "Evolutionary epidemiology, modeling host-parasite interactions",
+    "keywords": [
+      "evolutionary epidemiology",
+      "host–parasite coevolution",
+      "disease modeling",
+      "population biology"
+    ],
+    "topics": "Evolutionary dynamics of host–parasite systems and implications for disease control.",
     "website": ""
   },
   {
@@ -31,8 +47,14 @@
     "institution": "University of Idaho",
     "country": "USA",
     "email": "",
-    "keywords": ["evolutionary biology", "land snails", "speciation", "biogeography"],
-    "topics": "Island systems, speciation and trait evolution in snails",
+    "keywords": [
+      "speciation",
+      "island systems",
+      "biogeography",
+      "morphological evolution",
+      "snails"
+    ],
+    "topics": "Speciation and trait evolution in island systems with a focus on land snails.",
     "website": ""
   },
   {
@@ -40,8 +62,13 @@
     "institution": "University of Idaho",
     "country": "USA",
     "email": "",
-    "keywords": ["evolutionary genetics", "molecular evolution", "population genetics"],
-    "topics": "Molecular evolution and population genetics in natural systems",
+    "keywords": [
+      "evolutionary genetics",
+      "molecular evolution",
+      "phylogeography",
+      "population genetics"
+    ],
+    "topics": "Molecular evolution and population genetics in natural systems.",
     "website": ""
   },
   {
@@ -49,8 +76,13 @@
     "institution": "University of Idaho",
     "country": "USA",
     "email": "",
-    "keywords": ["experimental evolution", "microbial evolution", "adaptive dynamics"],
-    "topics": "Experimental evolution in microbes, adaptation dynamics",
+    "keywords": [
+      "experimental evolution",
+      "microbial evolution",
+      "adaptation",
+      "metabolism"
+    ],
+    "topics": "Experimental evolution in microbes and the genetic basis of adaptation.",
     "website": ""
   },
   {
@@ -58,8 +90,13 @@
     "institution": "University of Idaho",
     "country": "USA",
     "email": "crmiller@uidaho.edu",
-    "keywords": ["viral phylodynamics", "modeling adaptation", "epistasis", "viral genomics"],
-    "topics": "Models of viral adaptation, epistasis, molecular to phenotypic prediction",
+    "keywords": [
+      "viral evolution",
+      "phylodynamics",
+      "epistasis",
+      "evolutionary modeling"
+    ],
+    "topics": "Models of viral adaptation and genotype–phenotype mapping, including epistasis.",
     "website": ""
   },
   {
@@ -67,8 +104,13 @@
     "institution": "University of Idaho",
     "country": "USA",
     "email": "",
-    "keywords": ["data science", "interdisciplinary research", "computational methods"],
-    "topics": "Cross-disciplinary computational methods and data science infrastructure",
+    "keywords": [
+      "data science",
+      "bioinformatics",
+      "interdisciplinary research",
+      "science education"
+    ],
+    "topics": "Interdisciplinary data science and research training infrastructure.",
     "website": ""
   },
   {
@@ -76,8 +118,13 @@
     "institution": "University of Idaho",
     "country": "USA",
     "email": "hwichman@uidaho.edu",
-    "keywords": ["evolutionary biology", "viral evolution", "adaptation", "modeling"],
-    "topics": "Viral evolution, adaptive dynamics, integrating modeling & experiments",
+    "keywords": [
+      "viral evolution",
+      "molecular evolution",
+      "genomics",
+      "adaptation"
+    ],
+    "topics": "Viral and molecular evolution leveraging genomic approaches.",
     "website": ""
   },
   {
@@ -85,8 +132,97 @@
     "institution": "University of Idaho",
     "country": "USA",
     "email": "",
-    "keywords": ["microbial genomics", "antibiotic resistance", "bioinformatics"],
-    "topics": "Genomics of microbes, antibiotic resistance, computational microbiology",
+    "keywords": [
+      "microbial genomics",
+      "antibiotic resistance",
+      "bioinformatics",
+      "systems microbiology"
+    ],
+    "topics": "Genomics of microbes and antimicrobial resistance; computational microbiology.",
+    "website": ""
+  },
+  {
+    "name": "Paul Rowley",
+    "institution": "University of Idaho",
+    "country": "USA",
+    "email": "",
+    "keywords": [
+      "microbiology",
+      "virus–host interactions",
+      "innate immunity",
+      "yeast systems"
+    ],
+    "topics": "Mechanisms of microbial interactions and antiviral defense in model systems.",
+    "website": ""
+  },
+  {
+    "name": "Deborah L. Stenkamp",
+    "institution": "University of Idaho",
+    "country": "USA",
+    "email": "",
+    "keywords": [
+      "developmental biology",
+      "neuroscience",
+      "retina",
+      "gene regulation"
+    ],
+    "topics": "Development and regeneration of the vertebrate retina; gene regulatory mechanisms.",
+    "website": ""
+  },
+  {
+    "name": "Tanya Miura",
+    "institution": "University of Idaho",
+    "country": "USA",
+    "email": "",
+    "keywords": [
+      "virology",
+      "immunology",
+      "host–virus interactions",
+      "pathogenesis"
+    ],
+    "topics": "Virus–host interactions and immune responses during infection.",
+    "website": ""
+  },
+  {
+    "name": "Adam G. Jones",
+    "institution": "University of Idaho",
+    "country": "USA",
+    "email": "",
+    "keywords": [
+      "evolutionary ecology",
+      "sexual selection",
+      "genomics",
+      "parentage analysis"
+    ],
+    "topics": "Evolutionary ecology and genomics of mating systems and sexual selection.",
+    "website": ""
+  },
+  {
+    "name": "Jill L. Johnson",
+    "institution": "University of Idaho",
+    "country": "USA",
+    "email": "",
+    "keywords": [
+      "molecular chaperones",
+      "protein homeostasis",
+      "cell stress",
+      "biochemistry"
+    ],
+    "topics": "Molecular chaperone networks that maintain protein homeostasis under stress.",
+    "website": ""
+  },
+  {
+    "name": "James J. Nagler",
+    "institution": "University of Idaho",
+    "country": "USA",
+    "email": "",
+    "keywords": [
+      "fish biology",
+      "reproductive biology",
+      "genomics",
+      "environmental toxicology"
+    ],
+    "topics": "Genomics and reproductive biology in fishes; environmental influences.",
     "website": ""
   },
   {
@@ -94,8 +230,13 @@
     "institution": "University of Idaho",
     "country": "USA",
     "email": "",
-    "keywords": ["statistical methods", "computational biology", "algorithm development"],
-    "topics": "Algorithm development for computational biology and statistics",
+    "keywords": [
+      "statistical learning",
+      "computer vision",
+      "AI",
+      "bioinformatics"
+    ],
+    "topics": "Statistical learning and AI methods with applications to bioinformatics and imaging.",
     "website": ""
   },
   {
@@ -103,8 +244,13 @@
     "institution": "University of Idaho",
     "country": "USA",
     "email": "",
-    "keywords": ["computational biology", "genomics", "data science"],
-    "topics": "Genomic data analysis, computational biology methods",
+    "keywords": [
+      "computational biology",
+      "genomics",
+      "machine learning",
+      "data science"
+    ],
+    "topics": "Computational approaches and machine learning for genomic data analysis.",
     "website": ""
   },
   {
@@ -112,8 +258,13 @@
     "institution": "University of Idaho",
     "country": "USA",
     "email": "",
-    "keywords": ["mathematical biology", "population dynamics", "disease modeling"],
-    "topics": "Models of population dynamics, disease and evolutionary biology",
+    "keywords": [
+      "mathematical biology",
+      "population dynamics",
+      "epidemiology",
+      "differential equations"
+    ],
+    "topics": "Mathematical models of population and disease dynamics.",
     "website": ""
   },
   {
@@ -121,8 +272,13 @@
     "institution": "University of Idaho",
     "country": "USA",
     "email": "",
-    "keywords": ["computational biophysics", "molecular modeling", "protein folding"],
-    "topics": "Molecular dynamics, protein folding/structure prediction, biophysics",
+    "keywords": [
+      "computational biophysics",
+      "molecular dynamics",
+      "protein folding",
+      "free energy calculations"
+    ],
+    "topics": "Computational biophysics, protein structure and dynamics, and method development.",
     "website": ""
   },
   {
@@ -130,8 +286,13 @@
     "institution": "University of Idaho",
     "country": "USA",
     "email": "erkanb@uidaho.edu",
-    "keywords": ["metascience", "reproducibility", "Bayesian statistics", "statistical computation"],
-    "topics": "Meta-science and computational statistical methods for reproducibility",
+    "keywords": [
+      "Bayesian statistics",
+      "statistical computation",
+      "reproducibility",
+      "metascience"
+    ],
+    "topics": "Computational Bayesian methods and meta‑science for reproducibility.",
     "website": "https://www.uidaho.edu/people/erkanb"
   },
   {
@@ -139,8 +300,13 @@
     "institution": "University of Idaho",
     "country": "USA",
     "email": "jtvanleuven@uidaho.edu",
-    "keywords": ["phage ecology", "viral evolution", "microbiome interactions", "modeling"],
-    "topics": "Interactions among viruses, bacteria, hosts; phage ecology & evolution",
+    "keywords": [
+      "phage ecology",
+      "viral evolution",
+      "microbiome",
+      "modeling"
+    ],
+    "topics": "Ecology and evolution of bacteriophages and their interactions with hosts and microbiomes.",
     "website": ""
   },
   {
@@ -148,8 +314,13 @@
     "institution": "University of Idaho",
     "country": "USA",
     "email": "",
-    "keywords": ["epidemics", "statistical epidemiology", "population genetics"],
-    "topics": "Statistical modeling of epidemics, evolutionary aspects of disease spread",
+    "keywords": [
+      "epidemiology",
+      "statistical modeling",
+      "population genetics",
+      "evolution"
+    ],
+    "topics": "Statistical modeling of epidemics and evolutionary processes in populations.",
     "website": ""
   },
   {
@@ -157,8 +328,13 @@
     "institution": "University of Idaho",
     "country": "USA",
     "email": "",
-    "keywords": ["modeling evolution", "disease ecology", "coalescent theory"],
-    "topics": "Modeling evolutionary processes, disease ecology, population genetics",
+    "keywords": [
+      "mathematical biology",
+      "population genetics",
+      "coalescent theory",
+      "disease ecology"
+    ],
+    "topics": "Mathematical modeling of evolutionary and ecological processes.",
     "website": ""
   },
   {
@@ -166,8 +342,13 @@
     "institution": "University of Idaho",
     "country": "USA",
     "email": "",
-    "keywords": ["computer science", "algorithms", "computational systems"],
-    "topics": "Algorithms, computational systems relevant to bioinformatics",
+    "keywords": [
+      "computer science",
+      "algorithms",
+      "evolutionary computation",
+      "bio-inspired computing"
+    ],
+    "topics": "Algorithms and evolutionary computation with applications to life sciences.",
     "website": ""
   },
   {
@@ -175,8 +356,13 @@
     "institution": "University of Idaho",
     "country": "USA",
     "email": "",
-    "keywords": ["developmental biology", "molecular biology", "genetics"],
-    "topics": "Developmental and molecular biology, genetics (emerita)",
+    "keywords": [
+      "horizontal gene transfer",
+      "plasmids",
+      "antibiotic resistance",
+      "microbial ecology"
+    ],
+    "topics": "Plasmid biology and horizontal gene transfer in microbial communities.",
     "website": ""
   },
   {
@@ -184,8 +370,207 @@
     "institution": "University of Idaho",
     "country": "USA",
     "email": "",
-    "keywords": ["microbial ecology", "microbiome", "bioinformatics"],
-    "topics": "Microbial ecology, microbiomes, tools in bioinformatics (emeritus)",
+    "keywords": [
+      "microbiome",
+      "microbial ecology",
+      "evolution",
+      "bioinformatics"
+    ],
+    "topics": "Microbial ecology and evolution, including human-associated microbiomes.",
+    "website": ""
+  },
+  {
+    "name": "Prof. Ernest Mbega",
+    "institution": "NM-AIST (LiSBE)",
+    "country": "Tanzania",
+    "email": "ernest.mbega@nm-aist.ac.tz",
+    "keywords": [
+      "plant pathology",
+      "bacteriology",
+      "crop diseases",
+      "food security",
+      "One Health"
+    ],
+    "topics": "Plant pathology and bacteriology; crop disease management and food security.",
+    "website": "https://nm-aist.ac.tz/teams/prof-ernest-mbega/"
+  },
+  {
+    "name": "Prof. Linus Munishi",
+    "institution": "NM-AIST (LiSBE)",
+    "country": "Tanzania",
+    "email": "linus.munishi@nm-aist.ac.tz",
+    "keywords": [
+      "landscape ecology",
+      "conservation",
+      "biodiversity",
+      "spatial analysis",
+      "ecosystem management"
+    ],
+    "topics": "Landscape and conservation ecology; biodiversity assessment and management.",
+    "website": "https://nm-aist.ac.tz/teams/prof-linus-munishi/"
+  },
+  {
+    "name": "Dr. Emmanuel A. Mpolya",
+    "institution": "NM-AIST (LiSBE)",
+    "country": "Tanzania",
+    "email": "emmanuel.mpolya@nm-aist.ac.tz",
+    "keywords": [
+      "biostatistics",
+      "epidemiology",
+      "infectious diseases",
+      "statistical modeling",
+      "One Health"
+    ],
+    "topics": "Biostatistics and epidemiology of infectious diseases; modeling for public health.",
+    "website": "https://nm-aist.ac.tz/teams/dr-emmanuel-mpolya/"
+  },
+  {
+    "name": "Prof. Neema Kassim",
+    "institution": "NM-AIST (LiSBE)",
+    "country": "Tanzania",
+    "email": "neema.kassim@nm-aist.ac.tz",
+    "keywords": [
+      "food safety",
+      "nutrition",
+      "risk assessment",
+      "mycotoxins",
+      "chemical residues"
+    ],
+    "topics": "Food safety risk assessment and nutrition; contaminants in food systems.",
+    "website": "https://nm-aist.ac.tz/teams/prof-neema-kassim/"
+  },
+  {
+    "name": "Prof. Hulda Shaidi Swai",
+    "institution": "NM-AIST (LiSBE)",
+    "country": "Tanzania",
+    "email": "hulda.swai@nm-aist.ac.tz",
+    "keywords": [
+      "biomaterials",
+      "nanotechnology",
+      "drug delivery",
+      "biomedical engineering"
+    ],
+    "topics": "Biomaterials and nanomedicine; translational drug delivery technologies.",
+    "website": "https://www.nm-aist.ac.tz/index.php/hulda"
+  },
+  {
+    "name": "Prof. Gabriel M. Shirima",
+    "institution": "NM-AIST (LiSBE)",
+    "country": "Tanzania",
+    "email": "gabriel.shirima@nm-aist.ac.tz",
+    "keywords": [
+      "zoonoses",
+      "veterinary public health",
+      "One Health",
+      "epidemiology"
+    ],
+    "topics": "Epidemiology of emerging and re-emerging zoonoses; One Health approaches.",
+    "website": "https://nm-aist.ac.tz/teams/prof-gabriel-shirima/"
+  },
+  {
+    "name": "Prof. Joram Buza",
+    "institution": "NM-AIST (LiSBE)",
+    "country": "Tanzania",
+    "email": "joram.buza@nm-aist.ac.tz",
+    "keywords": [
+      "veterinary medicine",
+      "immunology",
+      "zoonoses",
+      "molecular biology"
+    ],
+    "topics": "Veterinary and molecular immunology; zoonotic disease.",
+    "website": "https://nm-aist.ac.tz/teams/prof-joram-buza/"
+  },
+  {
+    "name": "Dr. Mashamba Philipo",
+    "institution": "NM-AIST (LiSBE)",
+    "country": "Tanzania",
+    "email": "mashamba.philipo@nm-aist.ac.tz",
+    "keywords": [
+      "plant breeding",
+      "crop improvement",
+      "GxE",
+      "molecular breeding"
+    ],
+    "topics": "Plant breeding and molecular approaches to crop improvement.",
+    "website": "https://nm-aist.ac.tz/teams/dr-mashamba-philipo/"
+  },
+  {
+    "name": "Dr. Clara Mollay",
+    "institution": "NM-AIST (LiSBE)",
+    "country": "Tanzania",
+    "email": "",
+    "keywords": [
+      "environmental microbiology",
+      "wastewater",
+      "bioremediation"
+    ],
+    "topics": "Environmental microbiology and bioremediation in aquatic systems.",
+    "website": ""
+  },
+  {
+    "name": "Dr. Esther Kimaro",
+    "institution": "NM-AIST (LiSBE)",
+    "country": "Tanzania",
+    "email": "",
+    "keywords": [
+      "ecology",
+      "ecosystem services",
+      "climate change"
+    ],
+    "topics": "Ecosystem services and ecological responses to climate change.",
+    "website": ""
+  },
+  {
+    "name": "Dr. Issakwisa Ngondya",
+    "institution": "NM-AIST (LiSBE)",
+    "country": "Tanzania",
+    "email": "",
+    "keywords": [
+      "environmental engineering",
+      "water resources",
+      "GIS"
+    ],
+    "topics": "Water resources and environmental engineering; spatial analysis.",
+    "website": ""
+  },
+  {
+    "name": "Dr. Haikael D. Martin",
+    "institution": "NM-AIST (LiSBE)",
+    "country": "Tanzania",
+    "email": "",
+    "keywords": [
+      "molecular biology",
+      "biotechnology",
+      "omics"
+    ],
+    "topics": "Molecular biology and biotechnology; omics approaches in life sciences.",
+    "website": ""
+  },
+  {
+    "name": "Dr. Jofrey Raymond",
+    "institution": "NM-AIST (LiSBE)",
+    "country": "Tanzania",
+    "email": "",
+    "keywords": [
+      "public health",
+      "epidemiology",
+      "biostatistics"
+    ],
+    "topics": "Public health and epidemiology with quantitative methods.",
+    "website": ""
+  },
+  {
+    "name": "Dr. Akida Meya",
+    "institution": "NM-AIST (LiSBE)",
+    "country": "Tanzania",
+    "email": "",
+    "keywords": [
+      "microbiology",
+      "genomics",
+      "bioinformatics"
+    ],
+    "topics": "Microbiology and genomic data analysis; bioinformatics methods.",
     "website": ""
   }
 ]

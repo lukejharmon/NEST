@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NEST Project Hub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <style>
+    .pill{display:inline-block;border:1px solid #e5e7eb;border-radius:9999px;padding:.125rem .5rem;font-size:.75rem}
+  </style>
+</head>
+<body class="bg-neutral-50 text-neutral-900">
+  <header class="max-w-6xl mx-auto px-4 py-8">
+    <h1 class="text-3xl font-extrabold tracking-tight">NEST Project Hub</h1>
+    <p class="text-sm text-neutral-600 mt-1">
+      Search and filter collaborative projects. Click “Mentor suggestions” on any card to find matching faculty.
+    </p>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 pb-16">
+    <!-- Controls -->
+    <div class="bg-white rounded-2xl shadow p-4 mb-6">
+      <div class="grid md:grid-cols-4 gap-3">
+        <input id="q" type="search" inputmode="search" placeholder="Search title, keywords, description, leads…"
+               class="md:col-span-2 border border-neutral-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+               aria-label="Keyword search" />
+        <select id="statusFilter" class="border border-neutral-300 rounded-xl px-3 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+          <option value="">All statuses</option>
+          <option>idea</option><option>planning</option><option>active</option><option>completed</option>
+        </select>
+        <select id="countryFilter" class="border border-neutral-300 rounded-xl px-3 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+          <option value="">All countries</option>
+        </select>
+      </div>
+      <div class="flex items-center gap-3 mt-3">
+        <label class="text-sm inline-flex items-center gap-2">
+          <input id="exactMatch" type="checkbox" class="w-4 h-4 rounded border-neutral-300">
+          Exact match
+        </label>
+        <button id="clearBtn" class="ml-auto text-sm underline underline-offset-4">Clear</button>
+        <a href="https://docs.google.com/forms" target="_blank" rel="noopener" class="text-sm pill">Submit a project</a>
+      </div>
+    </div>
+
+    <div id="summary" class="text-sm text-neutral-600 mb-3" aria-live="polite"></div>
+    <div id="results" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+
+    <template id="emptyTpl">
+      <div class="col-span-full bg-white rounded-2xl p-10 text-center border border-dashed border-neutral-300">
+        <p class="text-lg font-semibold">No matches found</p>
+        <p class="text-sm text-neutral-600 mt-1">Try different keywords or clear filters.</p>
+      </div>
+    </template>
+
+    <template id="cardTpl">
+      <article class="bg-white rounded-2xl shadow p-5 flex flex-col gap-2">
+        <div class="flex items-start justify-between gap-3">
+          <h2 class="text-lg font-bold leading-snug"></h2>
+          <span class="pill text-neutral-700" data-status></span>
+        </div>
+        <div class="text-sm text-neutral-600" data-meta></div>
+        <p class="text-sm mt-1" data-desc></p>
+        <div class="flex flex-wrap gap-2 mt-2" data-chips></div>
+        <div class="text-sm text-neutral-600 mt-2" data-needs></div>
+        <div class="text-xs text-neutral-500 mt-2" data-updated></div>
+        <div class="mt-3 flex flex-wrap gap-2" data-actions></div>
+      </article>
+    </template>
+  </main>
+
+  <!-- Mentor suggestions modal -->
+  <dialog id="mentorDlg" class="rounded-2xl p-0 w-full max-w-2xl">
+    <div class="p-5">
+      <div class="flex items-start justify-between">
+        <h3 class="text-xl font-bold">Mentor suggestions</h3>
+        <button class="pill" onclick="document.getElementById('mentorDlg').close()">Close</button>
+      </div>
+      <p id="mentorIntro" class="text-sm text-neutral-600 mt-1"></p>
+      <div id="mentorList" class="mt-4 grid sm:grid-cols-2 gap-3"></div>
+    </div>
+  </dialog>
+
+  <footer class="max-w-6xl mx-auto px-4 pb-10 text-xs text-neutral-500">
+    NEST — Network for East Africa Science &amp; Training
+  </footer>
+
+  <script>
+    const PATH = '/NEST'; // adjust if you place files elsewhere
+    const PROJECTS_URL = PATH + '/projects.json';
+    const FACULTY_URL  = PATH + '/faculty.json';
+
+    const el = {
+      q: document.getElementById('q'),
+      status: document.getElementById('statusFilter'),
+      country: document.getElementById('countryFilter'),
+      exact: document.getElementById('exactMatch'),
+      clear: document.getElementById('clearBtn'),
+      results: document.getElementById('results'),
+      summary: document.getElementById('summary'),
+      emptyTpl: document.getElementById('emptyTpl'),
+      cardTpl: document.getElementById('cardTpl'),
+      mentorDlg: document.getElementById('mentorDlg'),
+      mentorIntro: document.getElementById('mentorIntro'),
+      mentorList: document.getElementById('mentorList')
+    };
+
+    let projects = [];
+    let faculty = [];
+    let fuse;
+
+    document.addEventListener('DOMContentLoaded', init);
+
+    async function init(){
+      try{
+        const [pText, fText] = await Promise.all([
+          fetch(PROJECTS_URL, {cache:'no-store'}).then(r=>{ if(!r.ok) throw new Error('Projects HTTP '+r.status); return r.text(); }),
+          fetch(FACULTY_URL,  {cache:'no-store'}).then(r=> r.ok ? r.text() : '[]')
+        ]);
+        try { projects = JSON.parse(pText); } catch(e){ console.error('Projects JSON parse error:', e, pText.slice(0,400)); projects=[]; }
+        try { faculty  = JSON.parse(fText); }   catch(e){ console.warn('Faculty JSON parse error (mentor suggestions disabled):', e); faculty=[]; }
+      }catch(err){
+        console.error('Failed to load data:', err);
+        el.summary.textContent = 'Error loading data.';
+        return;
+      }
+
+      // Populate filters
+      const countries = Array.from(new Set(projects.flatMap(p=>p.countries||[]))).sort();
+      for(const c of countries){ const o=document.createElement('option'); o.value=c; o.textContent=c; el.country.appendChild(o); }
+
+      // Init search
+      initFuse();
+      render();
+
+      // Events
+      el.q.addEventListener('input', render);
+      el.status.addEventListener('change', render);
+      el.country.addEventListener('change', render);
+      el.exact.addEventListener('change', ()=>{ initFuse(); render(); });
+      el.clear.addEventListener('click', ()=>{
+        el.q.value=''; el.status.value=''; el.country.value=''; el.exact.checked=false; initFuse(); render(); el.q.focus();
+      });
+    }
+
+    function initFuse(){
+      fuse = new Fuse(projects, {
+        includeScore: true,
+        threshold: el.exact.checked ? 0.2 : 0.35,
+        ignoreLocation: true,
+        minMatchCharLength: 2,
+        keys: [
+          {name:'title', weight:0.4},
+          {name:'description', weight:0.3},
+          {name:'keywords', weight:0.5},
+          {name:'leads', weight:0.3},
+          {name:'institutions', weight:0.2}
+        ]
+      });
+    }
+
+    function query(){
+      let data = projects.slice();
+      const q = el.q.value.trim();
+      const status = el.status.value;
+      const country = el.country.value;
+
+      if(q){
+        if(el.exact.checked){
+          const pattern = q.split(/\s+/).map(tok=>`="${tok}"`).join(' ');
+          data = fuse.search(pattern).map(r=>r.item);
+        }else{
+          data = fuse.search(q).map(r=>r.item);
+        }
+      }
+      if(status) data = data.filter(p => (p.status||'').toLowerCase() === status.toLowerCase());
+      if(country) data = data.filter(p => (p.countries||[]).some(c => c.toLowerCase() === country.toLowerCase()));
+
+      // Sort: newest first
+      data.sort((a,b)=> new Date(b.last_updated||0) - new Date(a.last_updated||0));
+      return data;
+    }
+
+    function render(){
+      const data = query();
+      el.results.innerHTML = '';
+      el.summary.textContent = `${data.length} ${data.length===1?'project':'projects'}`;
+
+      if(data.length===0){
+        el.results.appendChild(el.emptyTpl.content.cloneNode(true));
+        return;
+      }
+
+      for(const p of data){
+        const card = el.cardTpl.content.cloneNode(true);
+        card.querySelector('h2').textContent = p.title || 'Untitled project';
+        card.querySelector('[data-status]').textContent = (p.status||'').toLowerCase() || '—';
+        card.querySelector('[data-meta]').textContent =
+          [ (p.institutions||[]).join(' · '), (p.countries||[]).join(' / ') ].filter(Boolean).join(' — ');
+        card.querySelector('[data-desc]').textContent = p.description || '';
+
+        const chips = card.querySelector('[data-chips]');
+        (p.keywords||[]).forEach(k => {
+          const span = document.createElement('span'); span.className='pill'; span.textContent=k; chips.appendChild(span);
+        });
+
+        const needs = card.querySelector('[data-needs]');
+        if(p.needs && p.needs.length){
+          needs.innerHTML = `<span class="text-neutral-700">Needs:</span> ${p.needs.join(' · ')}`;
+        }
+
+        card.querySelector('[data-updated]').textContent =
+          p.last_updated ? `Updated ${p.last_updated}` : '';
+
+        const actions = card.querySelector('[data-actions]');
+        // Contact / links
+        const contactBtn = document.createElement('a');
+        contactBtn.className='pill underline';
+        const firstEmail = (p.emails||[]).find(e=>e);
+        contactBtn.href = firstEmail ? `mailto:${firstEmail}?subject=${encodeURIComponent('[NEST] '+(p.title||''))}` : '#';
+        contactBtn.textContent = firstEmail ? 'Contact lead' : 'No email listed';
+        if(!firstEmail) { contactBtn.classList.add('opacity-60','pointer-events-none'); }
+        actions.appendChild(contactBtn);
+
+        if(p.links && p.links.length){
+          const link = document.createElement('a');
+          link.className='pill underline'; link.href = p.links[0]; link.target='_blank'; link.rel='noopener';
+          link.textContent = 'Project link';
+          actions.appendChild(link);
+        }
+
+        // Mentor suggestions
+        const suggestBtn = document.createElement('button');
+        suggestBtn.className='pill';
+        suggestBtn.textContent='Mentor suggestions';
+        suggestBtn.onclick = ()=> openMentorSuggestions(p);
+        actions.appendChild(suggestBtn);
+
+        el.results.appendChild(card);
+      }
+    }
+
+    function openMentorSuggestions(project){
+      if(!faculty || faculty.length===0){
+        el.mentorIntro.textContent = 'Faculty data not available. Ensure /NEST/faculty.json is present.';
+        el.mentorList.innerHTML = '';
+        el.mentorDlg.showModal();
+        return;
+      }
+      const pKeys = new Set((project.keywords||[]).map(x=>x.toLowerCase().trim()));
+      const scored = faculty.map(f => {
+        const fKeys = new Set((f.keywords||[]).map(x=>x.toLowerCase().trim()));
+        const inter = new Set([...pKeys].filter(x=>fKeys.has(x)));
+        const union = new Set([...pKeys, ...fKeys]);
+        const score = union.size ? inter.size/union.size : 0;
+        return { f, score, matches:[...inter] };
+      }).filter(x => x.score > 0)
+        .sort((a,b)=> b.score - a.score)
+        .slice(0, 6);
+
+      el.mentorIntro.textContent = scored.length
+        ? `Top matches for “${project.title}” by keyword overlap:`
+        : 'No keyword overlap found. Consider adding broader keywords to the project or faculty profiles.';
+      el.mentorList.innerHTML = '';
+
+      for(const {f, score, matches} of scored){
+        const div = document.createElement('div');
+        div.className = 'border rounded-xl p-3';
+        const kchips = (f.keywords||[]).slice(0,8).map(k=>`<span class="pill">${k}</span>`).join(' ');
+        const mail = f.email ? `<a class="underline" href="mailto:${f.email}?subject=${encodeURIComponent('[NEST] '+project.title)}">${f.email}</a>` : '<span class="opacity-60">No email</span>';
+        const web  = f.website ? ` · <a class="underline" target="_blank" rel="noopener" href="${f.website}">Website</a>` : '';
+        div.innerHTML = `
+          <div class="flex items-start justify-between gap-3">
+            <div>
+              <div class="font-semibold">${f.name||'Unknown'}</div>
+              <div class="text-sm text-neutral-600">${[f.institution,f.country].filter(Boolean).join(' — ')}</div>
+              <div class="text-xs text-neutral-600 mt-1">Match ${(score*100).toFixed(0)}% · ${matches.join(', ')}</div>
+              <div class="text-sm mt-2">${kchips}</div>
+              <div class="text-sm mt-2">${mail}${web}</div>
+            </div>
+          </div>
+        `;
+        el.mentorList.appendChild(div);
+      }
+      el.mentorDlg.showModal();
+    }
+  </script>
+</body>
+</html>
