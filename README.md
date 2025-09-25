@@ -4,6 +4,6 @@
 
 [About NEST](about.html)  
 [Find committee members and collaborators](faculty_finder.html)  
-[Collaboration network](projects.html)  
+[Collaboration network](project_hub.html)  
 
 <br clear="left"/>
