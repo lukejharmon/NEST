@@ -207,6 +207,28 @@
       el.summary.textContent = 'Error loading data.';
       console.error(err);
     });
+
+    document.addEventListener('DOMContentLoaded', async () => {
+  const summary = document.getElementById('summary');
+  try {
+    const res = await fetch('https://lukejharmon.github.io/NEST/faculty.json', { cache: 'no-store' });
+    if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText}`);
+    const text = await res.text();
+    let faculty;
+    try {
+      faculty = JSON.parse(text);
+    } catch (e) {
+      console.error('JSON parse error. First 500 chars:\n', text.slice(0, 500));
+      throw e;
+    }
+    // proceed with your normal render(faculty)...
+    summary.textContent = `${faculty.length} ${faculty.length === 1 ? 'result' : 'results'}`;
+  } catch (err) {
+    console.error('Failed to load faculty.json:', err);
+    summary.textContent = 'Error loading data.';
+  }
+});
+
   </script>
 </body>
 </html>
